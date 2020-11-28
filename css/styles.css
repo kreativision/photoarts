@@ -1,0 +1,32 @@
+body {
+    background: rgb(55, 60, 71);
+}
+
+.sidenav {
+    padding-top: 20px;
+    width: 200px;
+}
+a.sidenav-button {
+    color: aliceblue !important;
+}
+a.sidenav-close {
+    text-align: right;
+}
+a.sidenav-close i {
+    color: aliceblue !important;
+    /* text-align: right; */
+}
+
+a.sidenav-close:focus {
+    outline:none;
+}
+
+a.btn-flat {
+    font-weight: 600;
+    color: antiquewhite;
+}
+
+a:focus {
+    outline: 1px dashed rgba(243, 243, 243, 0.747);
+    
+}
