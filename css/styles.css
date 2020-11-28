@@ -30,3 +30,19 @@ a:focus {
     outline: 1px dashed rgba(243, 243, 243, 0.747);
     
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.card-content {
+    color: rgb(42, 129, 201) !important;
+    font-weight: 600 !important;
+}
+
+.brand-photo {
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+}
