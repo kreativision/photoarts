@@ -5,9 +5,9 @@ function activate(btn) {
     var navBtns = document.querySelectorAll('.nav-wrapper a.btn-flat');
     navBtns.forEach(nav => {
         if (nav === target) {
-            nav.classList.remove('darken-3');
+            nav.classList.add('active');
         } else {
-            nav.classList.add('darken-3');
+            nav.classList.remove('active');
         }
     });
 }

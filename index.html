@@ -4,7 +4,8 @@
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
-  <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+  <link type="text/css" rel="stylesheet" href="css/styles.css" />
+  <link type="text/css" rel="stylesheet" href="css/scrollbar.css" />
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,29 +15,33 @@
 <body>
   <!-- Navigation -->
   <section name="Navigation">
-    <nav>
-      <div class="nav-wrapper cyan darken-3">
-        <a href="#" class="brand-logo">&nbsp;KV PhotoArts&nbsp;</a>
+    <nav class="navigation-bar">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">&nbsp;<img src="assets/card image.png" width="50px" height="50px">&nbsp;</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
           <i class="material-icons">menu</i>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <a href="#" id="home" onclick="activate('home')" class="waves-effect cyan waves-light btn-flat">Home</a>
+            <a href="#" id="home" onclick="activate('home')"
+              class="waves-effect waves-light btn-flat nav-btn active">Home</a>
           </li>
           <li>
-            <a href="#" id="about" onclick="activate('about')" class="waves-effect cyan darken-3 waves-light btn-flat">About Us</a>
+            <a href="#" id="about" onclick="activate('about')" 
+              class="waves-effect waves-light btn-flat nav-btn">About Us</a>
           </li>
           <li>
-            <a href="#" id="services" onclick="activate('services')" class="waves-effect cyan darken-3 waves-light btn-flat">Services</a>
+            <a href="#" id="services" onclick="activate('services')"
+              class="waves-effect waves-light btn-flat nav-btn">Services</a>
           </li>
           <li>
-            <a href="#" id="contact" onclick="activate('contact')" class="waves-effect cyan darken-3 waves-light btn-flat">Contact</a>
+            <a href="#" id="contact" onclick="activate('contact')"
+              class="waves-effect waves-light btn-flat nav-btn">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
-    <ul class="sidenav cyan darken-3" id="mobile-demo">
+    <ul class="sidenav sienav-color" id="mobile-demo">
       <li>
         <a href="#" class="sidenav-close">
           <i class="material-icons">close</i>
@@ -49,23 +54,36 @@
     </ul>
   </section>
 
-  <section name="body">
+  <section name="body" class="body">
+    <div class="header">
+      <h2 class="color-text"><em>Welcome to</em> <strong>KreatiVision PhotoArts</strong> <em>!!</em></h1>
+    </div>
+
     <div class="row">
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="assets/KV Branding-05.png" class="brand-photo">
+      <div class="col s12 m6">
+        <div class="card z-depth-0 glow">
+          <div class="card-content white-text">
+            <span class="card-title">Launch Offer !!</span>
+            <span class="card-subtitle">20% off on all orders above <br>₹ 599/-</span><br>
+            <!-- <span class="color-text">₹599/-</span> -->
           </div>
-          <div class="card-content center">
-            <h5>Launching Soon!!</h5>
-          </div>
+          <!-- <div class="color-text">₹ 599/-</div> -->
         </div>
       </div>
+
+      <!-- <div class="col s12 m6">
+        <div class="card z-depth-2 cyan darken-2 white-text about-card">
+          <div class="card-content">
+            <span class="card-title">About</span>
+          </div>
+          <hr>
+        </div>
+      </div> -->
     </div>
   </section>
 
 
-  <script type="text/javascript" src="js/document.js"></script>
+  <script type="text/javascript" src="js/UI_modifier.js"></script>
   <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 

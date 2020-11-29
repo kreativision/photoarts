@@ -1,48 +1,122 @@
+.navigation-bar {
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+}
+
+nav {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
 body {
-    background: rgb(55, 60, 71);
+    /* background-color: teal; */
+    background-image: url("../assets/headder\ 2.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+
+.brand-logo {
+    margin-top: 0.7%;
+}
+
+.brand-logo:focus {
+    outline: none;
 }
 
 .sidenav {
     padding-top: 20px;
-    width: 200px;
+    width: 250px;
 }
-a.sidenav-button {
+
+.sienav-color {
+    /* background-image: url("../assets/sidenav-gradient.jpg"); */
+    background-image: linear-gradient(to bottom right, #320764, #306195);
+}
+
+a.sidenav-button, a.sidenav-close i, a.nav-btn {
+    font-weight: 600;
     color: aliceblue !important;
 }
+
 a.sidenav-close {
     text-align: right;
 }
-a.sidenav-close i {
-    color: aliceblue !important;
-    /* text-align: right; */
-}
 
 a.sidenav-close:focus {
-    outline:none;
+    outline: none;
 }
 
-a.btn-flat {
-    font-weight: 600;
-    color: antiquewhite;
+a.nav-btn {
+    border-radius: 0px !important;
 }
 
-a:focus {
-    outline: 1px dashed rgba(243, 243, 243, 0.747);
-    
+a.nav-btn:focus, a.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.10);
 }
 
-.card {
+a.active {
+    border-bottom: 3px solid aliceblue;
+}
+
+.body {
+    margin-top: 60px;
+    padding: 0px 15px;
+}
+
+.header {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.glow, .about-card {
+    /* position: relative; */
     display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.card-content {
-    color: rgb(42, 129, 201) !important;
-    font-weight: 600 !important;
+    min-height: 200px;
+    height: fit-content;
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    border-radius: 5px;
 }
 
-.brand-photo {
-    width: 300px;
-    height: 450px;
-    border-radius: 10px;
+.glow {
+    text-transform: uppercase;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.about-card {
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.glow::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * 3px);
+    left: calc(-1 * 3px);
+    z-index: -1;
+    width: calc(100% + 3px * 2);
+    height: calc(100% + 3px * 2);
+    background: linear-gradient( 60deg, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * 3px);
+    animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.color-text {
+    background: -webkit-linear-gradient(140deg, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%)); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
